@@ -7,7 +7,7 @@
 
 This repository contains the backend service for **InstaMail AI**, a full-stack application designed to provide intelligent, context-aware email reply suggestions. This service is built with Java and the Spring Boot framework, exposing a secure REST API for the frontend client.
 
-**Live API Endpoint:** `[(https://instamail-ai.onrender.com/)` 
+**Live API Endpoint:** `[(https://instamail-ai.onrender.com/)]`  
 
 ---
 
