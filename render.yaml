@@ -1,6 +1,8 @@
 services:
   - type: web
     name: instamail-ai-backend
+    # This explicitly tells Render to use a generic native environment.
+    runtime: native
     plan: free
     buildCommand: "./mvnw clean install -DskipTests"
     startCommand: "java -jar target/backend-0.0.1-SNAPSHOT.jar"
@@ -8,4 +10,4 @@ services:
       - key: GEMINI_URL
         value: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent
       - key: GEMINI_KEY
-        value: ""
+        value: "" # You will add the real key in the Render dashboard.
