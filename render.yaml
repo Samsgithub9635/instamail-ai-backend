@@ -1,15 +1,14 @@
 services:
   - type: web
     name: instamail-ai-backend
-    # This is the correct way to specify the environment.
-    env: java
+    # The "env: java" line has been removed. Render will auto-detect Java.
     plan: free
     buildCommand: "./mvnw clean install -DskipTests"
     startCommand: "java -jar target/backend-0.0.1-SNAPSHOT.jar"
     envVars:
       - key: GEMINI_URL
-        # This is safe to keep here
         value: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent
       - key: GEMINI_KEY
-        # Leave the value blank here for security. You will add the key in the Render dashboard.
+        # An empty value is added to satisfy the blueprint parser.
+        # You will still add the real key in the Render dashboard later.
         value: ""
