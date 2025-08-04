@@ -12,3 +12,4 @@ services:
         value: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent
       - key: GEMINI_KEY
         # Leave the value blank here for security. You will add the key in the Render dashboard.
+        value: ""
