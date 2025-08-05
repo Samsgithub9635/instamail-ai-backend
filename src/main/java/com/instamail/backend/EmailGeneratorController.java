@@ -7,7 +7,11 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/email")
 @AllArgsConstructor
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = {
+        "http://localhost:5173",          // For your local frontend development
+        "https://instamail-ai.netlify.app", // For your live frontend website
+        "https://mail.google.com"         // For your Chrome Extension's content script
+})
 public class EmailGeneratorController {
 
 
